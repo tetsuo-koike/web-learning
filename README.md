@@ -1,0 +1,220 @@
+# web-learning
+
+プログラミング学習用のフォルダです。
+
+## Day 1
+
+- VS Codeをインストールした
+- web-learningフォルダを作った
+- VS Codeでフォルダを開いた
+- ターミナルでpwdを使って現在作業しているフォルダを確認した（Path）
+- ターミナルでlsを使って作業中フォルダの中身を確認した
+- GitHubにログインした
+- GitHubのUsenameを設定した
+
+## 今日覚えた言葉
+- VS Code: コードを書くための無料ソフト
+- GitHub: コードを保存・公開し、ポートフォリオ的にも使える場所
+- pwd: Print working directoryの略。現在作業中のフォルダを表示してという命令コマンド
+- cd: Change directoryの略。作業フォルダを指定されたフォルダへ変更する命令子マンド
+- ls: Listの略。作業フォルダ内の中身を一覧表示させるコマンド
+- Path: PC内の住所（Web上でも同じ？）
+- prompt:命令入力を促す表示 or AIの場合、行動を促す指示そのもの
+
+## Day 2
+
+- index.htmlファイルを作成した
+- HTMLで自己紹介ページを書いた
+- ブラウザで表示し、確認した
+- 自身のGitHubプロフィールへのリンクを追加した
+- HTMLでのコードの効率の良い書き方を学んだ
+- 基本となるHTMLタグの役割を確認した
+
+## 今日覚えた言葉
+- HTML: Webページの骨組みを作る言語
+- HTMLタグ <>: HTMLで「これは見出し」「これは文章」などの意味を宣言する印
+- index.html: Webページの入り口になるファイル
+- !DOCTYPE html:　基本はHTMLファイルの一番上に書く宣言(このドキュメントはHTMLで書かれてますよっていう宣言)
+- html:文章全体を包むタグ。ここからここまでがHTMLですよという意味
+- head: 画面には直接表示されないページ設定を書く場所
+- meta charset = "UTF-8":日本語などの文字を正しく表示するための設定
+- title:ブラウザのタブに表示されるページタイトル
+- body:実際にブラウザ画面に表示される内容を書く場所
+- h1:ページで１番の見出し
+- h2:セクションごとの中見出し
+- p:文書、段落
+- ul:順番のない箇条書きリスト全体の宣言
+- li:箇条書きの１項目ごとを表す
+- a: リンクを作るタグ
+- href:リンク先のURLを指定する部分
+
+## Day 3
+- style.cssを作成した
+- index.htmlからstyle.cssを読みこむ設定を追加した
+- CSSでページ全体の背景色、文字色、フォントを変更した
+- h1の文字色を変更した
+- h2に下線をつけた
+- bodyにmax-width、margin、paddingを使ってページ全体の余白と横幅を整えた
+- aタグにCSSを当てて、GitHubリンクをボタンのような見た目に変更した
+- VS Codeのカラーピッカーで色を選べることを確認した
+
+## 今日覚えた言葉
+
+- CSS:Webページの見た目を整えるための物
+- style.css:CSSを書くためのファイル
+- link タグ:HTMLのheadタグ内に記載。外部ファイルを読みこむためのタグ
+- selector:どのHTMLにデザインを当てるか指定する部分（選ぶ）
+- property:何を変更するか指定する部分
+- value:どのように変更するかを指定する部分
+- background-color:背景色を指定する(property)
+- color:文字色を指定する(property)
+- font-family:文字の種類を指定する(property)
+- max-width:要素の最大横幅を指定する(property)
+- margin:要素の外側の余白を指定する(property)
+- padding:要素の内側の余白を指定する(property)
+- border-bottom:要素の下側に線を付ける
+- border-radius:角を丸くする
+- text-decoration:文字の装飾を指定する
+
+## 今日理解した事
+
+CSSはHTMLに書いた内容の見た目を変えるために使う
+HTML側でstyle.cssを読みこむことで、CSSに書いた内容がブラウザの表示に反映される。
+
+CSSは基本的に次の形で書く
+
+selector {
+    property:value;
+}
+
+example h1タグの文字色を青にする
+
+h1{
+    color:#2563eb;
+}
+
+また、色を確認する時は、最初に赤などの分かり易い色に変えると、CSSが効いているか確認し易い。
+
+CSSで指定するpxサイズがどんなものなのか、実際にどう使っていくのかを学んだ。
+
+現状、余白を選ぶ場合はこんな感じで意識
+8px　：ちょっと離す（かなり小さ目）
+16px :普通　迷ったらコレ！
+24px :ゆったりした広さ　時点でコレ！
+40px :ガッツリ大きく切り分けたい時！コレ！
+
+また文字のフォントに関しても学んだ
+h1 : 32px 一番大きい見出し
+h2 : 24px　中見出し
+h3 : 19px　小見出し
+p  : 16px　通常の文章
+
+ul / li など箇条書きリストのデフォルトも16px
+ただCSSにてフォントサイズや、リストの形を変更することもできる。
+
+max-width / margin / paddingの３つの概念は文字だけじゃなく図式的に理解できるように再度、図形を書いての復習を行う。
+
+## Day 4
+- sectionタグを使って、ページ内の内容をまとまりごとに分けた
+- section全体にCSSを当てて、カードのような見た目に変更した
+- classを使って、特定のHTMLだけに名前をつけた
+- class="profile"を使って、自己紹介部分だけ中央寄せと背景色を変更した
+- class="goals"を使って、学習目標のsectionだけ左側に線をつけた
+- div class="two-column"を使って、今学んでいる事とできるようになった事の２つのsectionをまとめた
+- display:flexを使って、2つのsectionを横並びにした
+- gapを使って、横並びの要素同士の間隔を調整した
+- flex:1を使って、横並びのsectionを同じ幅にした
+- list-style-type:none;を使って、箇条書きの点を消した
+- ctrl+Shift+P → Wrap → sectionで囲い込んでsection化することを覚えた
+- Shift+Alt+Fで各コードの階層を自動で合わせる機能を覚えた
+- Ctrl+Fで指定した単語をファイル内のコードから検索・ハイライト表示できることを覚えた
+- Ctrl+Shift+Fで指定した単語をindex.htmlやstyle.cssなどプロジェクトをまたいで単語を検索することができる
+
+## 今日覚えた言葉
+- section:ページ内の意味のあるまとまりを作るタグ
+- div:レイアウトやCSSのために使う意味を持たない箱
+- class:HTMLに名前をつけて、CSSで指定し易くするためのもの
+- .profile: class ="profile"がついたHTMLをCSSで指定する書き方
+- .goals:class="goals"がついたHTMLをCSSで指定する書き方
+- display: flex:要素を横並びにし易くする指定
+- gap:要素同士の間隔を指定する
+- flex:1:横並びの要素同士を同じくらいの幅にする
+- list-style-type:箇条書きの記号の種類を指定する
+- padding-left:左側の内側余白を指定する
+- text-align: center;:文字やインライン要素を中央寄せにするCSS。他にもleft/rightなどの指定がある
+
+## 今日理解した事
+
+HTMLでは、sectionやdivを使ってページの内容をまとまりごとに整理できる
+
+sectionは意味のあるまとまりを作るために使う
+divはレイアウトやCSSのために使う、１まとまりの箱を用意するために使う
+
+classを使うと特定のHTMLに名前を付けられる
+HTMLではclass="profile"のように書き、CSSでは.profileのように先頭にドットを付けて指定する
+
+example
+
+```html
+<section class="profile">
+    <h1>Tetsuo Koike</h1>
+</section>    
+```
+
+
+## Day 5
+
+- ブラウザ幅を狭くして。スマホ表示に近い状態を確認した
+- PC幅ではtwo-columnが横並びになっている事を確認した
+- スマホ幅ではtwo-columnが狭くなり、読みづらくなることを確認した
+- @media(max-width:600px){}を使って、600px以下の時に中のCSSを指定するような条件を追加した
+- @media(max-width:600px){.two-column{flex-direction:column;}}を使って、スマホ幅の時には横並びを縦並びになるように設定した
+- @media(max-width:600px){body{margin:16px auto; padding:12px;}}に設定し、スマホサイズの時は外側の余白と内側の余白を小さくなるよう設定した
+- @media(max-width:600px){h1{font-size:28px;}}にし、スマホサイズの時、大見出しのフォントサイズが28pixelになるように設定した
+- PC幅に戻すと、横並びや余白が元に戻る事を確認した。
+
+## 今日覚えた言葉
+- responsive:画面サイズに合わせて表示を調整すること
+- media query:条件によってCSSを切り替える仕組み@mediaの部分
+- @media:media queryを書くためのCSS
+- max-width:指定した幅以下のとき、という条件を作るのに使った。最大の幅
+- flex-direction:Flexbox内の並び方向を指定する
+- column:縦並び
+- font-size:文字サイズを指定する
+
+## 今日理解した事
+レスポンシブ対応とは、PCやスマホなど画面サイズが違っても見易く表示されるように調整すること。
+
+PCでは横並びが見易くても、スマホでは横幅が狭くなるため、縦並びにした方が読みやすいことがある。
+
+CSSでは@mediaを使う事で、画面幅が一定以下の時だけ別のCSSを適用できる
+
+example
+
+```css
+@media(max-width:600px){
+    .two-column{
+        flex-direction:　column;
+    }
+}
+```
+これは画面幅が600px以下の時だけ、.two-columnの中身を縦並びに表示するという意味。
+
+今回はこれに加えて、bodyタグとh1タグも指定して変更を加えた。
+
+```css
+@media(max-width:600px){
+    body{
+        margin:16px auto;
+        padding:12px;
+    }
+
+    h1{
+        font-size:28px;
+    }
+
+    .two-column{
+        flex-direction:column;
+    }
+}
+```
