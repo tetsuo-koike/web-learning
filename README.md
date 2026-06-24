@@ -2,6 +2,10 @@
 
 プログラミング学習用のフォルダです。
 
+## GitHub Pages URL
+
+https://tetsuo-koike.github.io/web-learning/
+
 ## Day 1
 
 - VS Codeをインストールした
@@ -217,4 +221,44 @@ example
         flex-direction:column;
     }
 }
+```
+
+## Day 6
+
+- `git --version` でGitが入っているか確認した
+- Git for Windowsをインストールした
+- Gitのユーザー名とメールアドレスを設定した
+- `git init` でweb-learningフォルダをGit管理にした
+- `git status` で状態を確認した
+- `git add` でファイルをcommit対象に追加した
+- `git commit` で最初の変更履歴を保存した
+- GitHubに `web-learning` リポジトリを作成した
+- `git remote add origin` でPCとGitHubをつないだ
+- `git branch -M main` でブランチ名をmainにした
+- `git push -u origin main` でGitHubにアップロードした
+- GitHub Pagesで自己紹介ページをWebページとして公開した
+- README.mdに公開URLを追加した
+
+## 今日覚えた言葉
+
+- Git: ファイルの変更履歴を管理する道具
+- GitHub: コードを保存・共有・公開できるサービス
+- repository: コードと履歴を入れる場所
+- commit: 変更を履歴として保存すること
+- push: PCのcommitをGitHubに送ること
+- remote: GitHub上の接続先
+- branch: 作業ライン
+- GitHub Pages: HTML/CSSをWebページとして公開できる機能
+
+## 今日理解したこと
+
+Gitで変更履歴を記録し、GitHubにpushすることで、PC内のコードをネット上に公開できる。
+
+基本の流れ:
+
+```bash
+git status
+git add README.md index.html style.css
+git commit -m "Create profile page"
+git push -u origin main
 ```
