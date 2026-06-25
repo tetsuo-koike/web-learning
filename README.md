@@ -9,6 +9,27 @@ https://tetsuo-koike.github.io/web-learning/
 ## 内容
 HTML,CSS,Git,GitHub Pagesを使って作成した自己紹介ページです
 
+## Week1 振返り
+
+Week1では、VS Code、HTML、CSS、Git、GitHubの基本を学んだ
+
+最初はVS Codeの使い方やターミナル操作から始め、HTMLで自己紹介ページを作成した
+その後、CSSで見た目を整え、section、class、Flexbox、レスポンシブ対応を使ってページを改善した
+
+最後にGitで変更履歴を管理し、GitHubにコードをPush（送信）して、GitHub PagesでWebページとして公開した。
+
+
+## Week1で出来るようになった事
+- VS Codeでファイルを作成・編集できる
+- HTMLで基本的なWebページを作れる
+- CSSで色、余白、文字、レイアウトを調整できる
+- section、div、classを使ってページを整理できる
+- Flexboxで横並びを作れる
+- @mediaを使ってスマホ幅に対応できる
+- Gitで変更をcommitできる（コードの変更履歴を加えて、現状をセーブする事）
+- GitHubにpush(送信)できる
+- GitHub PagesでWebページを公開できる
+
 ## Day 1
 
 - VS Codeをインストールした
