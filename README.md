@@ -1,10 +1,13 @@
 # web-learning
 
-プログラミング学習用のフォルダです。
+プログラミング学習用のリポジトリです。
 
 ## GitHub Pages URL
 
 https://tetsuo-koike.github.io/web-learning/
+
+## 内容
+HTML,CSS,Git,GitHub Pagesを使って作成した自己紹介ページです
 
 ## Day 1
 
