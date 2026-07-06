@@ -30,6 +30,40 @@ Week1では、VS Code、HTML、CSS、Git、GitHubの基本を学んだ
 - GitHubにpush(送信)できる
 - GitHub PagesでWebページを公開できる
 
+## Week1復習ドリル１
+- 学習ドキュメント風のWebページを作成した
+- header,nav,mainを使ってページの構造を作った
+- サイドメニューと本文をFlexboxで横並びにした
+- idとリンクを使って、ページ内を移動できるようにした
+- :hoverを使って、マウスが乗ったリンクの色を変更した
+- メディアクエリを使って、スマホでは横並びになるようにした
+- Gitでコミットし、GitHub Pagesへ公開した
+
+##　今日覚えた言葉
+- nav:メニューや移動用リンクをまとめるタグ
+- main:ページの中心となる内容をまとめるタグ
+- id:HTML要素に固有の名前を付けるもの
+- hover:マウスが乗っている間だけCSSを適用する指定
+- column:要素を縦方向に並べる指定
+
+## idとclassの違い
+
+idとclassは共に、HTML要素に名前を付けるために使う。
+idはページ内で１つの要素を特定するための固有の名前。基本的に１ページで１回だけ使う。
+classは複数の要素をまとめて指定することができる。
+
+"""html
+<section id="html" class="card">...</section>
+<section id="css" class="card">...</section>
+"""
+
+とした場合
+・idで指定されたhtmlとcssは、それぞれ固有の名詞
+・classで指定されたcardは、２つに共通するグループ名
+
+というような使い分けとなる。
+
+
 ## Day 1
 
 - VS Codeをインストールした
