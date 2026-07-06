@@ -52,10 +52,10 @@ idとclassは共に、HTML要素に名前を付けるために使う。
 idはページ内で１つの要素を特定するための固有の名前。基本的に１ページで１回だけ使う。
 classは複数の要素をまとめて指定することができる。
 
-"""html
+```html
 <section id="html" class="card">...</section>
 <section id="css" class="card">...</section>
-"""
+```
 
 とした場合
 ・idで指定されたhtmlとcssは、それぞれ固有の名詞
