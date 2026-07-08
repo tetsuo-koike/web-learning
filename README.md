@@ -30,6 +30,35 @@ Week1では、VS Code、HTML、CSS、Git、GitHubの基本を学んだ
 - GitHubにpush(送信)できる
 - GitHub PagesでWebページを公開できる
 
+## Week1復習ドリル２
+- GitHubリポジトリ風の学習ログページを作成した
+- header,nav,main,section,divを使ってページ構造を作った
+- navとul/liを使って,Code/Issues/Pull Requests/Actionsのタブメニューを作った
+- .tab-list ulにdisplay:flexを使って、メニューを横並びにした
+- file-listというclassを使って、ファイル一覧だけにCSSを当てた
+- border,boder-radius,overflow:hiddenを使ってGitHub風の格子状リストを作った
+- idとclassを同じタグに着けて、それぞれリンク用・CSS指定用として使い分けた
+- 二重枠の原因を確認し、code-sectionを使って不要な枠を消した
+- スマホ幅でも表示が崩れないか確認した
+
+## 今日覚えた言葉
+
+- border:枠線を指定するCSS
+- solid:実線を表すboderの種類
+- overflow:hidden:中身が角丸の外にはみ出さないようにする指定
+- last-child:最後の要素だけ指定するCSS
+
+## 今日理解した事
+idはページ内リンクの移動先を作るために使い、classはCSSで見た目を整えるために使う
+
+同じHTMLタグにidとclassを両方つけることもできる
+
+```
+<section id = "readme" class="readme">
+```
+
+
+
 ## Week1復習ドリル１
 - 学習ドキュメント風のWebページを作成した
 - header,nav,mainを使ってページの構造を作った

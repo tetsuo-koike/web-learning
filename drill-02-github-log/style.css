@@ -1,0 +1,125 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f6f8fa;
+    color: #24292f;
+}
+
+header {
+    background-color: white;
+    padding: 24px;
+    border-bottom: 1px solid #d0d7de;
+}
+
+header h1 {
+    margin: 0 0 8px;
+    font-size: 28px;
+
+}
+
+header p {
+    margin: 0;
+    color: #57606a;
+}
+
+.tab-list ul{
+    display: flex;
+    gap: 8px;
+    padding-left: 0px;
+    margin: 0;
+    list-style-type: none;
+}
+
+
+
+.tab-list{
+    background-color: white;
+    padding: 0 24px;
+    border-bottom: 1px solid #d0d7de;
+}
+
+
+.tab-list a {
+    display: block;
+    padding: 8px 8px;
+    color: #24292f;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.tab-list a:hover{background-color: #f6f8fa;}
+
+main {
+    max-width: 1000px;
+    margin: 24px 16px;
+}
+
+
+main section{
+    margin-bottom: 16px;
+    padding: 20px;
+    background-color: white;
+    border: 1px  solid #d0d7de;
+    border-radius: 8px;
+}
+
+.file-list{
+    border: 1px solid #d0d7de;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.file-list ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.file-list li {
+    padding: 12px 16px;
+    border-bottom: 1px solid #d0d7de;
+}
+
+.file-list li:last-child{
+    border-bottom: none;
+}
+
+.file-list li:hover{
+    background-color: #f6f8fa;
+    border-left-color: #0969da;
+}
+
+.readme h2{
+    margin-top: 0;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #d0d7de;
+    font-size: 20px;
+}
+
+.readme h3{
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.readme p{
+    line-height: 1.6;
+}
+
+.code-section{
+    padding: 0;
+    background-color: #white;
+    border: none;
+}
+
+@media(max-width:600px){
+    .tab-list ul{
+        flex-wrap: wrap;
+    }
+
+    header{
+        padding: 16px;
+    }
+
+    main{margin: 16px;}
+
+}
