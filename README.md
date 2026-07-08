@@ -30,6 +30,41 @@ Week1では、VS Code、HTML、CSS、Git、GitHubの基本を学んだ
 - GitHubにpush(送信)できる
 - GitHub PagesでWebページを公開できる
 
+## Week2 Day8
+
+- Week2のJavaScript学習を開始した
+- week2-javascriptフォルダを作成した
+- index.html,style.css,script.jsファイルを作成した
+- HTMLにCSS,JavaScriptを読み込むタグを設定した(link rel/script src="script.js)
+- id="message"とid="changebutton"をHTMLに付けた
+- JavaScriptでdocument.getElementById("・・・")を使い、HTML要素を取得した
+- addEventListener("click",function(){・・・})を使って、ボタンのクリックに反応する処理を書いた
+- textContentを使って、画面の文章を変更した
+- style.backgroundColorを使って、JavaScriptから背景色を変更した
+
+
+## 今日覚えた言葉
+
+- JavaScript:Webページに動きや反応を付けるための言語
+- script.js:JavaScriptを書くためのファイル
+- scriptタグ:HTMLタグからJavaScriptファイルを読み込むためのタグ
+- const:JavaScript内で名前を付けて値を扱うための書き方
+- document:ブラウザが持っているHTML全体を表す物
+- getElementById:：指定したidを持つHTML要素を探し、取得する命令
+- addEventListener:クリックなどの出来事を持って、処理を実行する命令
+- click:クリックされた時を表すイベント
+- textContent:HTML要素の文字内容
+- style.backgroundColor:HTML要素の背景色をJavaScriptから変更する指定
+
+## 今日理解した事
+
+JavaScriptでは、まずHTMLの中から操作したい要素を探して、取得するところから始まる
+
+```javascript
+const message = document.getElementById("message");
+```
+
+
 ## Week1復習ドリル２
 - GitHubリポジトリ風の学習ログページを作成した
 - header,nav,main,section,divを使ってページ構造を作った
