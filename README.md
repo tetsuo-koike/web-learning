@@ -30,6 +30,41 @@ Week1では、VS Code、HTML、CSS、Git、GitHubの基本を学んだ
 - GitHubにpush(送信)できる
 - GitHub PagesでWebページを公開できる
 
+## Week2 Day9
+
+- JavaScriptの変数と価について学習した
+- constを使って、文字列や数値に名前を付けた
+- console.logを使って、Consoleに値を表示して確認した
+- 文字列と数値の違いを確認した
+- +を使って文字列を連結した
+- テンプレートリテラルを使って、文章の中に変数を埋め込んだ
+- JavaScriptで作った文章を、textContentを使って画面に表示した
+
+### 今日覚えた言葉
+
+- 変数：値に名前を付けて扱うためのもの
+- const: あとから別の値に入れ替えない前提で名前を付ける書き方
+- string:文字列、ダブルクォートなどで囲まれた文字
+- number:数値。計算に使える数字
+- console.log:Consoleに値を表示して確認する命令
+- 文字列連結:文字と文字をつなげること
+- テンプレートリテラル：バッククォートで囲み、${}を使って変数を文章に埋め込む書き方
+- textContent:HTML要素の文字内容
+
+###　今日理解した事
+
+JavaScriptでは、`const`を使って値に名前を付けることができる
+
+```javascript
+
+const userName = "Tetsuo";
+const studyDay = 9;
+
+
+
+
+
+
 ## Week2 Day8
 
 - Week2のJavaScript学習を開始した
