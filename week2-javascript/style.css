@@ -7,7 +7,7 @@ body{
 
 main{
     max-width: 600px;
-    margin: 400px auto;
+    margin: 24px auto;
     padding: 24px;
     background-color: white;
     border: 1px solid #d0d7de;
@@ -34,4 +34,27 @@ button:hover{
 }
 
 
+section{
+    max-width: 600px;
+    margin: 24px auto;
+    padding: 24px;
+    background-color: white;
+    border: 1px solid #d0d7de;
+    border-radius: 8px;
+}
 
+label{
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+    font-size: 16px;
+}

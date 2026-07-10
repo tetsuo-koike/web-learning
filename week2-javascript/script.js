@@ -33,3 +33,20 @@ message.textContent=greeting2;
 
 message.textContent = `${greeting2}。今日はJavaScript学習のDay${studyDay}です。`
 
+
+const nameInput = document.getElementById("nameInput");
+const greetButton = document.getElementById("greetButton");
+
+greetButton.addEventListener("click",function(){
+    const inputName = nameInput.value;
+
+    if (inputName === ""){
+        message.textContent = "名前を入力してください";
+        message.style.backgroundColor = "#fee2e2";
+    }
+    else {
+        message.textContent = `こんにちは、${inputName}さん`;
+        message.style.backgroundColor = "#dbeafe";
+    }
+
+});

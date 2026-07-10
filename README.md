@@ -30,6 +30,55 @@ Week1では、VS Code、HTML、CSS、Git、GitHubの基本を学んだ
 - GitHubにpush(送信)できる
 - GitHub PagesでWebページを公開できる
 
+## Week 2 Day 10
+
+- 入力欄を使ったJavaScriptの練習をした
+- inputタグを使って、名前を入力する欄を作成した
+- labelタグを使って、入力欄の説明を追加した
+- JavaScriptでgetElementByIdを使い、入力欄とボタンを取得した
+- .valueを使って、入力欄に入力された文字を取得した
+- addEventListenerを使って、ボタンがクリックされた時の処理を書いた
+- if文を使って、入力欄が空かどうかを判定した
+- elseを使って、入力がある場合とない場合で処理を分けた
+- textContentを使って、画面に表示される文章を変更した
+- style.backgroundColorを使って、条件によって背景色を変更した
+
+### 今日覚えた言葉
+
+- input：ユーザーが文字などを入力するためのHTMLタグ
+- label：入力欄の説明を表すHTMLタグ
+- value：入力欄に入っている値を取得するためのもの
+- if：条件が成り立つ時だけ処理を実行する書き方
+- else：ifの条件に当てはまらなかった時の処理を書く場所
+- ===：左右の値が同じかどうかを比較する記号
+- 空文字：`""` のこと。何も文字が入っていない状態
+- 条件分岐：条件によって実行する処理を分けること
+
+### 今日理解したこと
+
+JavaScriptでは、入力欄に入っている文字を`.value`で取得できる。
+
+```javascript
+const inputName = nameInput.value;
+```
+
+これは、id="nameInput"の入力欄に入力された文字をinputNameとして使えるようにしている。
+ifを使うと、条件によって処理を分けることができる。
+
+```javascript
+if (inputName === "") {
+    message.textContent = "名前を入力してください";
+    message.style.backgroundColor = "#fee2e2";
+} else {
+    message.textContent = `こんにちは、${inputName}さん`;
+    message.style.backgroundColor = "#dbeafe";
+}
+```
+このコードでは、入力欄が空の場合は注意メッセージと赤い背景を表示し、名前が入力されている場合はあいさつ文と青い背景を表示している。
+=は代入、===は比較に使う。
+
+
+
 ## Week2 Day9
 
 - JavaScriptの変数と価について学習した
@@ -59,9 +108,6 @@ JavaScriptでは、`const`を使って値に名前を付けることができる
 
 const userName = "Tetsuo";
 const studyDay = 9;
-
-
-
 
 
 
