@@ -30,6 +30,65 @@ Week1では、VS Code、HTML、CSS、Git、GitHubの基本を学んだ
 - GitHubにpush(送信)できる
 - GitHub PagesでWebページを公開できる
 
+## Week 2 Day 11
+
+- JavaScriptの配列とリスト表示を学習した(複数のデータをまとめて取り扱う練習)
+- HTMLに空のulタグを作り、JavaScriptでliを追加した
+- 配列を使って、複数の学習項目をまとめて扱った ➡ 今日のメインテーマ
+- 配列の番号は0から始まることを確認した
+- studyItems[0]で配列の最初の要素を取り出した
+- studyItems.lengthで配列の要素数を取得した
+- document.createElementを使って、JavaScriptからliタグを作成した
+- textContentを使って、作成したliに文字を入れた
+- appendChildを使って、作成したliをulの中に追加した
+- for文を使って、配列の中身を1つずつリストとして表示した　➡ 今日のメインテーマ
+- CSSでJavaScriptから作ったリストの見た目を整えた
+
+### 今日覚えた言葉
+
+- 配列：複数のデータをまとめて扱うためのもの
+- 要素：配列の中に入っている1つ1つのデータ
+- index：配列の番号。JavaScriptでは0から始まる
+- length：配列の要素数を表すもの
+- createElement：JavaScriptからHTML要素を作る命令
+- appendChild：親要素の中に子要素を追加する命令
+- for文：同じ処理を繰り返すための書き方
+- i：繰り返し処理でよく使われる番号用の変数
+
+### 今日理解したこと
+
+配列を使うと、複数のデータをまとめて扱うことができる。
+
+```javascript
+const studyItems = ["HTML", "CSS", "JavaScript", "GitHub", "DOM"];
+```
+
+配列の番号は0から始まる。
+```javascript
+studyItems[0] // HTML
+studyItems[1] // CSS
+studyItems[2] // JavaScript
+```
+
+lengthを使うと、配列の要素数を取得できる。
+
+```javascript
+studyItems.length
+```
+
+for文を使うと、配列の中身を1つずつ取り出して、同じ処理を繰り返すことができる。
+```javascript
+for (let i = 0; i < studyItems.length; i++) {
+    const item = document.createElement("li");
+    item.textContent = studyItems[i];
+    studyList.appendChild(item);
+}
+```
+このコードでは、配列の中身を1つずつ取り出し、liタグを作って、ulの中に追加している。
+これはToDoアプリで、複数のタスクを画面に表示する処理の土台になる。
+
+
+
 ## Week 2 Day 10
 
 - 入力欄を使ったJavaScriptの練習をした

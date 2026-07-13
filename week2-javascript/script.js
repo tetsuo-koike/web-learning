@@ -50,3 +50,27 @@ greetButton.addEventListener("click",function(){
     }
 
 });
+
+
+const studyItems=["HTML","CSS","JavaScript","GitHub","DOM"];
+const studyList = document.getElementById("studyList");
+
+// console.log(studyItems);
+
+// const firstItem = document.createElement("li");
+// firstItem.textContent = studyItems[0];
+// studyList.appendChild(firstItem);
+
+// const secondItem = document.createElement("li");
+// secondItem.textContent = studyItems[1];
+// studyList.appendChild(secondItem);
+
+// const thirdItem = document.createElement("li");
+// thirdItem.textContent = studyItems[2];
+// studyList.appendChild(thirdItem);
+
+for (let i = 0; i < studyItems.length; i++){
+    const item = document.createElement("li");
+    item.textContent = studyItems[i];
+    studyList.appendChild(item);
+}
