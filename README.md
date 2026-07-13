@@ -30,6 +30,77 @@ Week1では、VS Code、HTML、CSS、Git、GitHubの基本を学んだ
 - GitHubにpush(送信)できる
 - GitHub PagesでWebページを公開できる
 
+## Week 2 Day 12
+
+- ToDoアプリ最小版を作成した
+- todo-appフォルダを新しく作成した
+- index.html、style.css、script.jsを分けて作成した
+- inputタグでタスク入力欄を作成した
+- 追加ボタンを作成した
+- tasks配列を作り、入力されたタスクをまとめて管理した
+- .valueを使って、入力欄の文字を取得した
+- pushを使って、tasks配列の最後にタスクを追加した
+- renderTasks関数を作り、tasks配列の中身を画面に表示した
+- for文でtasks配列の中身を1つずつ取り出した
+- createElementでliタグを作成した
+- appendChildで作成したliをtodoListに追加した
+- innerHTML = "" を使って、リストの重複表示を防いだ
+- タスク追加後に入力欄を空にした
+- 空入力の時はメッセージを表示し、returnで処理を止めた
+
+### 今日覚えた言葉
+
+- push：配列の最後に新しい要素を追加する命令
+- function：処理のまとまりを作る書き方
+- render：画面に表示するという意味でよく使われる言葉
+- renderTasks：tasks配列の中身を画面に表示するための関数
+- innerHTML：HTML要素の中身をまとめて扱うもの
+- return：そこで処理を終了する命令
+
+### 今日理解したこと
+
+ToDoアプリでは、入力されたタスクを直接画面に追加するだけでなく、まず`tasks`配列に保存した。
+
+```javascript
+const tasks = [];
+```
+
+追加ボタンが押された時に、入力欄の文字を取得する。
+```javascript
+const taskText = todoInput.value;
+```
+
+入力が空なら、メッセージを表示して処理を止める。
+```javascript
+if (taskText === "") {
+    emptyMessage.textContent = "タスクを入力してください";
+    return;
+}
+```
+
+入力がある場合は、pushを使ってtasks配列の最後に追加する。
+
+```javascript
+tasks.push(taskText);
+```
+
+その後、renderTasks()を実行して、配列の中身を画面に表示する。
+```javascript
+function renderTasks() {
+    todoList.innerHTML = "";
+
+    for (let i = 0; i < tasks.length; i++) {
+        const item = document.createElement("li");
+        item.textContent = tasks[i];
+        todoList.appendChild(item);
+    }
+}
+```
+todoList.innerHTML = "";を入れることで、表示を一度空にしてから作り直し、同じタスクが重複して表示されるのを防いでいる。
+これは、ToDoアプリやリスト表示アプリの基本になる考え方。
+
+
+
 ## Week 2 Day 11
 
 - JavaScriptの配列とリスト表示を学習した(複数のデータをまとめて取り扱う練習)
