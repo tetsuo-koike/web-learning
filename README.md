@@ -30,6 +30,65 @@ Week1では、VS Code、HTML、CSS、Git、GitHubの基本を学んだ
 - GitHubにpush(送信)できる
 - GitHub PagesでWebページを公開できる
 
+## Week 2 Day 14
+
+- API連携アプリとして名言アプリを作成した
+- quote-appフォルダを作成した
+- index.html、style.css、script.jsを分けて作成した
+- DummyJSON Quotes APIを使って、ランダムな名言を取得した
+- fetchを使って、外部APIにデータを取りに行った
+- response.json()を使って、APIから返ってきたJSON形式のデータをJavaScriptで扱える形に変換した
+- thenを使って、API取得後の処理を順番に書いた
+- data.quoteを使って、名言本文を画面に表示した
+- data.authorを使って、作者名を画面に表示した
+- catchを使って、API取得に失敗した時の処理を書いた
+- 取得中は「取得中...」と表示するようにした
+
+### 今日覚えた言葉
+
+- API：外部のサービスやサーバーからデータを受け取るための仕組み
+- fetch：指定したURLにデータを取りに行く命令
+- JSON：APIでよく使われるデータ形式。JavaScriptで扱いやすい形に変換できる
+- response：APIから返ってきた返事
+- response.json()：返ってきたJSONデータをJavaScriptで扱える形に変換する処理
+- then：前の処理が終わった後に実行する処理を書くもの
+- data：JSON変換後のデータ
+- catch：途中でエラーが起きた時の処理を書くもの
+
+### 今日理解したこと
+
+API連携では、まず`fetch`を使って外部のURLにデータを取りに行く。
+
+```javascript
+fetch("https://dummyjson.com/quotes/random")
+```
+APIから返ってきたデータは、そのままでは扱いにくいため、response.json()でJavaScriptで扱える形に変換する。
+```javascript
+.then(function (response) {
+    return response.json();
+})
+```
+変換されたデータは、次のthenでdataとして受け取る。
+```javascript
+.then(function (data) {
+    quoteText.textContent = data.quote;
+    authorText.textContent = data.author;
+})
+```
+
+今回のAPIでは、data.quoteに名言本文、data.authorに作者名が入っていた。
+API取得に失敗した場合は、catchで失敗時の表示を作ることができる。
+```javascript
+
+.catch(function () {
+    quoteText.textContent = "取得に失敗しました";
+    authorText.textContent = "-";
+});
+```
+これにより、APIからデータを取得し、DOM操作で画面に表示する流れを確認できた。
+
+
+
 ## Week 2 Day 13
 
 - ToDoアプリに削除機能と完了機能を追加した
