@@ -30,6 +30,193 @@ Week1では、VS Code、HTML、CSS、Git、GitHubの基本を学んだ
 - GitHubにpush(送信)できる
 - GitHub PagesでWebページを公開できる
 
+## Week 2 JavaScript 重要ワード・コード一覧
+
+### JavaScriptの基本
+
+| 名称 | 内容 | ざっくりした使い方 |
+|---|---|---|
+| JavaScript | Webページに動きや反応をつける言語 | ボタンを押したら文字を変える、入力内容を表示する |
+| script.js | JavaScriptを書くファイル | HTMLから`script`タグで読み込む |
+| scriptタグ | HTMLからJavaScriptを読み込むタグ | `<script src="script.js"></script>` |
+| const | 値に名前をつける書き方 | `const userName = "Tetsuo";` |
+| let | あとから変わる値に名前をつける書き方 | `let score = 0;` |
+| string | 文字列 | `"Tetsuo"` や `"こんにちは"` |
+| number | 数値 | `9` や `100` |
+| boolean | 真偽値。true / false | `completed: false` などで使う |
+
+### DOM操作
+
+| 名称 | 内容 | ざっくりした使い方 |
+|---|---|---|
+| DOM | JavaScriptからHTMLを操作する仕組み | HTML要素を探して、文字や見た目を変える |
+| document | HTML全体を表すもの | `document.getElementById(...)` |
+| getElementById | idを使ってHTML要素を取得する | `document.getElementById("message")` |
+| textContent | HTML要素の文字を変更する | `message.textContent = "こんにちは";` |
+| style | JavaScriptからCSSを変更する | `message.style.backgroundColor = "#dbeafe";` |
+| createElement | JavaScriptでHTMLタグを作る | `document.createElement("li")` |
+| appendChild | 親要素の中に子要素を追加する | `todoList.appendChild(item);` |
+| innerHTML | HTML要素の中身をまとめて扱う | `todoList.innerHTML = "";` |
+
+### 入力とイベント
+
+| 名称 | 内容 | ざっくりした使い方 |
+|---|---|---|
+| input | 入力欄を作るHTMLタグ | `<input id="todoInput" type="text">` |
+| value | 入力欄の中身を取得する | `const text = todoInput.value;` |
+| button | ボタンを作るHTMLタグ | `<button id="addButton">追加</button>` |
+| addEventListener | クリックなどのイベントを待つ | `button.addEventListener("click", function () {...});` |
+| click | クリックされた時のイベント | `"click"` と書いて使う |
+| disabled | ボタンを押せない状態にする | `button.disabled = true;` |
+
+### 条件分岐・繰り返し
+
+| 名称 | 内容 | ざっくりした使い方 |
+|---|---|---|
+| if | 条件が合う時だけ処理する | `if (inputName === "") {...}` |
+| else | ifに当てはまらない時の処理 | `else {...}` |
+| === | 左右が同じか比較する | `inputName === ""` |
+| = | 代入。右の値を左に入れる | `score = score + 1;` |
+| return | そこで処理を止める | 空入力の時に処理を止める |
+| for | 同じ処理を繰り返す | 配列の中身を1つずつ表示する |
+| i | 繰り返しでよく使う番号用の変数 | `for (let i = 0; ... )` |
+| length | 配列の要素数 | `tasks.length` |
+
+### 配列・オブジェクト
+
+| 名称 | 内容 | ざっくりした使い方 |
+|---|---|---|
+| 配列 array | 複数のデータをまとめる | `const tasks = [];` |
+| index | 配列の番号。0から始まる | `tasks[0]` |
+| push | 配列の最後に追加する | `tasks.push(taskText);` |
+| splice | 配列から指定した要素を削除する | `tasks.splice(i, 1);` |
+| オブジェクト object | 関連するデータをまとめる | `{ text: "買い物", completed: false }` |
+| property | オブジェクト内の項目 | `task.text` や `task.completed` |
+| true / false | 真偽値 | 完了済みかどうかを表す |
+
+### 関数
+
+| 名称 | 内容 | ざっくりした使い方 |
+|---|---|---|
+| function | 処理のまとまりを作る | `function renderTasks() {...}` |
+| render | 画面に表示する意味でよく使う言葉 | `renderTasks()` |
+| 引数 | 関数に渡す値 | `checkAnswer(selectedChoice)` |
+| 呼び出し | 作った関数を実行すること | `renderTasks();` |
+
+### API・JSON
+
+| 名称 | 内容 | ざっくりした使い方 |
+|---|---|---|
+| API | 外部サービスからデータを受け取る仕組み | 名言データを取得する |
+| fetch | 指定したURLにデータを取りに行く | `fetch("https://dummyjson.com/quotes/random")` |
+| JSON | APIでよく使われるデータ形式 | `{ "quote": "...", "author": "..." }` |
+| response | APIから返ってきた返事 | `.then(function (response) {...})` |
+| response.json() | JSONをJavaScriptで扱える形に変換する | `return response.json();` |
+| then | 前の処理が終わった後に実行する | fetch後の処理を書く |
+| data | JSON変換後のデータ | `data.quote` |
+| catch | エラーが起きた時の処理 | API取得失敗時に使う |
+
+## よく使ったコード例
+
+### HTMLからJavaScriptを読み込む
+
+```html
+<script src="script.js"></script>
+```
+</body> の直前に書くと、HTML要素が読み込まれた後にJavaScriptを実行できる。
+idでHTML要素を取得する
+
+```javascript
+const message = document.getElementById("message");
+```
+
+HTMLの中からid="message"の要素を取得する。
+ボタンが押された時に処理する
+
+```javascript
+button.addEventListener("click", function () {
+    message.textContent = "ボタンが押されました！";
+});
+```
+
+クリックされた時に、画面の文字を変更する。
+入力欄の値を取得する
+
+```javascript
+const inputName = nameInput.value;
+```
+
+入力欄に入っている文字を取得する。
+空入力をチェックする
+
+```javascript
+if (inputName === "") {
+    message.textContent = "名前を入力してください";
+    return;
+}
+```
+
+入力欄が空なら、メッセージを表示して処理を止める。
+配列に追加する
+
+```javascript
+tasks.push(taskText);
+```
+
+tasks配列の最後に、新しいタスクを追加する。
+配列を繰り返し表示する
+
+```javascript
+for (let i = 0; i < tasks.length; i++) {
+    const item = document.createElement("li");
+    item.textContent = tasks[i];
+    todoList.appendChild(item);
+}
+```
+
+配列の中身を1つずつ取り出して、liとして画面に表示する。
+表示を一度空にする
+
+```javascript
+todoList.innerHTML = "";
+```
+
+リストを作り直す前に、中身を空にして重複表示を防ぐ。
+オブジェクトでタスクを管理する
+
+```javascript
+tasks.push({
+    text: taskText,
+    completed: false
+});
+```
+
+タスクの文章と完了状態をまとめて保存する。
+配列から削除する
+
+```javascript
+tasks.splice(i, 1);
+```
+
+tasks配列のi番目から1個削除する。
+APIからデータを取得する
+
+```javascript
+fetch("https://dummyjson.com/quotes/random")
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data) {
+        quoteText.textContent = data.quote;
+        authorText.textContent = data.author;
+    })
+    .catch(function () {
+        quoteText.textContent = "取得に失敗しました";
+        authorText.textContent = "-";
+    });
+    ```
+APIから名言データを取得し、JSONをJavaScriptで扱える形に変換して、画面に表示する.
+
 ## Week 2 Day 14
 
 - API連携アプリとして名言アプリを作成した
